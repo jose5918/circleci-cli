@@ -42,9 +42,9 @@ while (( "$#" )); do
     --offset=*) offset=${1/--offset=/''} ; shift ;;
     --offset*|-o*) offset=${2} ; shift ; shift ;;
     --parameter-key=*) paramkeys+=(${1/--parameter-key=/}) ; shift ;;
-    --parameter-key*|-K*) paramkeys+=(${2}) ; shift ; shift ;;
+    --parameter-key*|-K*) paramkeys+=("${2}") ; shift ; shift ;;
     --parameter-value=*) paramvals+=(${1/--parameter-value=/}) ; shift ;;
-    --parameter-value*|-V*) paramvals+=(${2}) ; shift ; shift ;;
+    --parameter-value*|-V*) paramvals+=("${2}") ; shift ; shift ;;
     --project=*) project=${1/--project=/''} ; shift ;;
     --project*|-p*) project=${2} ; shift ; shift ;;
     --resolution=*) resolution=${1/--resolution=/''} ; shift ;;
